@@ -91,11 +91,14 @@ header a.cv{
     font-size: 16px;
     color: var(--white);
     padding: 10px 15px;
-    background-color: var(--bluecolor);
-    transition: 0.4s ease;
+    transition: 0.6s ease;
+    transition-delay: 1s;
+    background: #548CA8;
+
 }
 header a.cv:hover{
-    background-color: #548CA8;
+    background: #548CA8;
+    box-shadow: 0 0 20px #548CA8 , 0 0 80px #548CA8 , 0 0 160px #548CA8  ;
 }
 
 input{
