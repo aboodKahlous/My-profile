@@ -80,7 +80,7 @@ header nav ul li::before{
     transition: 0.4s;
 }
 header nav ul li:hover:before{
-    width: 100%;
+    width: 105%;
 }
 header nav ul li a{
     color: var(--white);
