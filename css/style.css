@@ -97,13 +97,12 @@ header a.cv{
     color: var(--white);
     padding: 10px 15px;
     transition: 0.6s ease;
-    transition-delay: 1s;
     background: #548CA8;
 
 }
 header a.cv:hover{
     background: #548CA8;
-    box-shadow: 0 0 20px #548CA8 , 0 0 80px #548CA8 , 0 0 160px #548CA8  ;
+    box-shadow: 0 0 400px #548CA8 , 0 0 100px #548CA8 , 0 0 200px #548CA8  ;
 }
 
 input{
@@ -187,17 +186,15 @@ label{
 
 .first-section .first.flex-box{
     width: 100%;
-    margin-top: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--bgcolor);
-
 }
 
 
 /* start first-section first */
 .first-section .first.flex-box .left{
-    width: 20%;
+    width: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -208,9 +205,10 @@ label{
     margin-top: 100px;
 }
 .first-section .first.flex-box .left img{
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
+    border: 5px solid var(--navcolor);
 }
 .first-section .first.flex-box .left h3{
     color: var(--hcolor);
@@ -252,25 +250,28 @@ label{
     color: var(--white);
 }
 
-.first-section .first.flex-box .left a.cv{
-    display: none;
-}
+
 .first-section .first.flex-box .left .cv{
-        display: block;
-        margin-right: 20px;
-        margin-top: 20px;
-        border-radius: 5px;
-        font-size: 16px;
-        color: var(--white);
-        padding: 10px 15px;
-        background-color: var(--bluecolor);
-        transition: 0.4s ease;
-        text-align: center;
-    }
+    display: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--white);
+    padding: 10px 10px;
+    background-color: var(--bluecolor);
+    transition: 0.4s ease;
+    text-align: center;
+}
+.first-section .first.flex-box .left .cv:hover{
+    background: #548CA8;
+    box-shadow: 0 0 400px #548CA8 , 0 0 100px #548CA8 , 0 0 200px #548CA8  ;
+}
+
 
 /* start first-section center */
+
 .first-section .first.flex-box .center{
-    width: 43%; 
+    width: 70%; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -293,23 +294,13 @@ label{
     border-radius: 10px;
     margin-top: -35px;
 }
-/* .first-section .first.flex-box .center h3::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 10px;
-    background-color: var(--bluecolor);
-    border-radius: 10px;
-} */
-
 .first-section .first.flex-box .center p.p-1{
    color: var(--textcolor);
    margin: 2em 0;
    padding: 5px;
    line-height: 1.8;
    letter-spacing: 1px;
+   width: 80%;
 }
 
 .first-section .first.flex-box .center p.p-2{
@@ -329,28 +320,16 @@ label{
     font-weight: bold;
     color: var(--textcolor);
 }
- 
 
 
-
-/* start first-section right */
-.first-section .first.flex-box .right{
-    width: 33%;  
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    align-items: center;
-}
-.first-section .first.flex-box .right img{
-    width: 100%; 
-}
+/* start media for About me  */
 
 @media (max-width: 767px){
     .first-section .first.flex-box{
         display: flex;
         flex-direction: column;
         justify-content: left;
+        margin-top: 70px;
     }
     .first-section .first.flex-box .left{
         width: 100%;
@@ -358,13 +337,14 @@ label{
         justify-content: space-evenly;
         flex-direction: row;
         margin-top: 0;
+        border-right: none;
     }
+    .first-section .first.flex-box .left .cv{
+        display: block;
+    }
+    
     .first-section .first.flex-box .center{
         width: 100%;
-        margin-top: 0;
-    }
-    .first-section .first.flex-box .right{
-        width: 300px;
         margin-top: 0;
     }
     
@@ -375,6 +355,8 @@ label{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 70px;
+
     }
     .first-section .first.flex-box .left{
         width: 50%;
@@ -385,37 +367,23 @@ label{
         width: 50%;
         border-bottom: 1px solid var(--bluecolor);
         margin-top: 0;
-    }
-    .first-section .first.flex-box .right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-    }
-    .first-section .first.flex-box .right img{
-        width: 400px;
-        height: 300px;
     }
 }
 @media(min-width : 1024px){
     .first-section .first.flex-box{
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
 
     }
     .first-section .first.flex-box .left{
-        width: 20%;
+        width: 25%;
         border-bottom: none;
         margin-top: 100px;
     }
     .first-section .first.flex-box .center{
-        width: 43%;
+        width: 70%;
         border-bottom: none;
-        margin-top: 100px;
-    }
-    .first-section .first.flex-box .right{
-        width: 33%;
         margin-top: 100px;
     }
     
@@ -426,67 +394,106 @@ label{
 
 /************************************ skilles **********************************************/
 
-.skilles{
-    padding: 20px;
+.wrapper-skills{
+    width: 100%;
+    padding: 40px;
 }
-
-.skilles .my-skille h3{
-    color: var(--hcolor);
-    font-weight: bold;
-    margin:20px 0;
-    margin-left: 25px;
-    padding: 5px;
-    font-size: 40px;
-    width: fit-content;
-    border-bottom: 1px solid var(--bluecolor);
+.wrapper-skills h2{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
 }
-.skilles .my-skille span.sp{
-    width: 50px;
-    height: 10px;
+.wrapper-skills .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper-skills .container .my-skills{
+    width: 60%;
+}
+.wrapper-skills .container .my-skills .skills{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.wrapper-skills .container .my-skills .skills .details{
+    width: 100%;
+    color: var(--white);
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.wrapper-skills .container .my-skills .skills .bar{
+    border: 2px solid var(--bluecolor);
+    border-radius: 20px;
+}
+.wrapper-skills .container .my-skills .skills .bar div{
+    height: 9px;
+    border-radius: 10px;
     background-color: var(--bluecolor);
-    border-radius: 10px;
-    margin-top: -35px;
 }
-/* .skilles .my-skille h3::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 10px;
-    background-color: var(--bluecolor);
-    border-radius: 10px;
-} */
-
-.skilles .my-skille .skill{
-    width: 75%;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-    overflow: hidden;
-    margin-left: 25px;
+#html-bar{
+    width: 90%;
 }
-.skilles .my-skille .skill span{
+#css-bar{
+    width: 90%;
+}
+#sass-bar{
+    width: 70%;
+}
+#javascript-bar{
+    width: 40%;
+}
+#jQuery-bar{
+    width: 40%;
+}
+#git-bar{
     width: 30%;
-    height: 100%;
-    display: block;
-    background-color: blue;
+}
+.wrapper-skills .container .image{
+    width: 35%;
+}
+.wrapper-skills .container .image img{
+    width: 100%;
+}
+@media (max-width: 868px){
+    .wrapper-skills .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper-skills .container .my-skills{
+        width: 100%;
+    }
+    .wrapper-skills .container .image{
+        width: 100%;
+    }
 }
 
-@media(max-width : 767px){
-    .skilles .my-skille{
-        width: 100%;
-        height: 100%;
-        margin-top:10px;
-        padding: 20px;
-    }
-    .skilles .my-skille .skill{
-        margin-left: 0;
-        width: 100%;
-    }
-    .skilles .my-skille h3{
-        margin-left: 0;
-    }
+
+
+/**/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 30px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--bluecolor);
+    border-radius: 5px;
+}
+
+
+
+
+
+
