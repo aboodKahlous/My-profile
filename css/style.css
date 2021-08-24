@@ -18,15 +18,7 @@ body{
 li,ol{
     list-style: none;
 }
-button , input{
-    padding: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-button:focus,input:focus{
-    outline: none;
-}
+
 a{
     text-decoration: none;
 }
@@ -281,7 +273,7 @@ label{
 .first-section .first.flex-box .center h3{
     color: var(--hcolor);
     font-weight: bold;
-    margin:30px 0;
+    margin:10px 0 30px 0;
     padding: 5px;
     font-size: 40px;
     width: fit-content;
@@ -293,6 +285,7 @@ label{
     background-color: var(--bluecolor);
     border-radius: 10px;
     margin-top: -35px;
+    margin-left: 65px;
 }
 .first-section .first.flex-box .center p.p-1{
    color: var(--textcolor);
@@ -330,12 +323,12 @@ label{
         flex-direction: column;
         justify-content: left;
         margin-top: 70px;
+        padding: 0;
     }
     .first-section .first.flex-box .left{
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
         margin-top: 0;
         border-right: none;
     }
@@ -347,6 +340,9 @@ label{
         width: 100%;
         margin-top: 0;
     }
+    .first-section .first.flex-box .center p.p-1{
+        width: 100%;
+    }
     
 }
 
@@ -355,7 +351,7 @@ label{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: 70px;
+        margin-top: 50px;
 
     }
     .first-section .first.flex-box .left{
@@ -363,10 +359,16 @@ label{
         border-bottom: 1px solid var(--bluecolor);
         margin-top: 0;
     }
+    .first-section .first.flex-box .left .cv{
+        display: block;
+    }
     .first-section .first.flex-box .center{
         width: 50%;
         border-bottom: 1px solid var(--bluecolor);
         margin-top: 0;
+    }
+    .first-section .first.flex-box .center p.p-1{
+        width: 100%;
     }
 }
 @media(min-width : 1024px){
@@ -377,14 +379,20 @@ label{
 
     }
     .first-section .first.flex-box .left{
-        width: 25%;
+        width: 40%;
         border-bottom: none;
         margin-top: 100px;
     }
+    .first-section .first.flex-box .left .cv{
+        display: none;
+    }
     .first-section .first.flex-box .center{
-        width: 70%;
+        width: 60%;
         border-bottom: none;
         margin-top: 100px;
+    }
+    .first-section .first.flex-box .center p.p-1{
+        width: 80%;
     }
     
 }
@@ -392,7 +400,7 @@ label{
 /************************************ end first-section ************************************/
 
 
-/************************************ skilles **********************************************/
+/************************************ Start   skilles **********************************************/
 
 .wrapper-skills{
     width: 100%;
@@ -406,6 +414,7 @@ label{
     color: var(--white);
 }
 .wrapper-skills .container{
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -459,6 +468,7 @@ label{
 }
 @media (max-width: 868px){
     .wrapper-skills .container{
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -470,6 +480,51 @@ label{
         width: 100%;
     }
 }
+
+/************************************ End skilles **********************************************/
+
+
+/************************************ Start Contact **********************************************/
+.About-me{
+    margin-top: 40px;
+    padding: 30px;
+}
+.About-me h2{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+.About-me .container{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.About-me .container .form{
+    width: 60%;
+}
+.About-me .container .form form input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--bluecolor); 
+}
+
+.About-me .container .image{
+    width: 40%;
+}
+.About-me .container .image img{
+    width: 100%;
+}
+
+
+/************************************ End skilles **********************************************/
+
+
 
 
 
