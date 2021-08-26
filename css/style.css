@@ -33,6 +33,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: var(--navcolor);
+    border-bottom:4px solid #3688b1 ;
     position: fixed;
     top: 0;
     left: 0;
@@ -412,6 +413,8 @@ label{
     font-weight: 700;
     font-family: serif;
     color: var(--white);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .wrapper-skills .container{
     padding: 40px;
@@ -477,11 +480,144 @@ label{
         width: 100%;
     }
     .wrapper-skills .container .image{
-        width: 100%;
+        width: 80%;
     }
 }
 
 /************************************ End skilles **********************************************/
+
+
+
+/************************************ Start my services **********************************************/
+.My-services{
+    margin-top: 30px;
+    width: 100%;
+}
+.My-services h2{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.My-services .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.My-services .container .service{
+    max-width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--navcolor);
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: serif;
+    cursor: pointer;
+}
+
+.My-services .container .service .icon{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--bluecolor);
+    text-align: center;
+    margin: 25px auto;
+    transition: 0.4s linear;
+    border-radius: 50%;
+    z-index: -1;
+}
+.My-services .container .service:hover .icon{
+    background-color: var(--bluecolor);
+    color: var(--white);
+}
+.My-services .container .service i{
+    line-height: 60px;
+    font-size: 26px;
+}
+
+.My-services .container .service h3{
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+.My-services .container .service p{
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+@media (max-width : 767px){
+    .My-services .container .service{
+        max-width: 90% ;
+    }
+}
+@media (min-width : 768px){
+    .My-services .container .service{
+        max-width: 45%;
+    }
+    .My-services .container .service.right{
+        max-width: 93%;
+    }
+}
+@media (min-width : 1024px){
+    .My-services .container .service{
+        max-width: 30%;
+    }
+    .My-services .container .service.right{
+        max-width: 30%;
+    }
+}
+/************************************ End my services **********************************************/
+
+
+/************************************ Start my Portfolio **********************************************/
+.my-portfolio{
+    margin-top: 40px;
+    padding: 30px;
+}
+.my-portfolio h2{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.my-portfolio nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-portfolio nav ul{
+    display: inline-block;
+}
+.my-portfolio nav ul li{
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid var(--bluecolor);
+    padding : 15px 20px ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+    color: #fff;
+}
+.my-portfolio nav ul li.active{
+    color: #fff;
+    background-color : var(--bluecolor)
+}
+.my-portfolio nav ul li:hover{
+    color: #fff;
+    background-color : var(--bluecolor)
+}
+.my-portfolio nav ul li a{
+    color: #fff;
+}
+/************************************ end my Portfolio **********************************************/
+
 
 
 /************************************ Start Contact **********************************************/
@@ -495,11 +631,13 @@ label{
     font-weight: 700;
     font-family: serif;
     color: var(--white);
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .About-me .container{
     padding: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
@@ -521,8 +659,20 @@ label{
     width: 100%;
 }
 
+@media (max-width : 867px){
+    .About-me .container{
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .About-me .container .image{
+        width: 80%;
+    }
+}
 
-/************************************ End skilles **********************************************/
+
+/************************************ End Contact **********************************************/
 
 
 
