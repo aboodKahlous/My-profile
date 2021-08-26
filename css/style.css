@@ -22,7 +22,36 @@ li,ol{
 a{
     text-decoration: none;
 }
+button{
+    border: none;
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+textarea:focus{
+    outline: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+h2{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
+    margin: 20px auto;
+}
 
+@media (max-width : 767px){
+    h2{
+        font-size: 26px;
+    }
+}
 /************************************ Start header navbar ***********************************/
 
 header{
@@ -95,12 +124,9 @@ header a.cv{
 }
 header a.cv:hover{
     background: #548CA8;
-    box-shadow: 0 0 400px #548CA8 , 0 0 100px #548CA8 , 0 0 200px #548CA8  ;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
 }
 
-input{
-    display: none;
-}
 label{
     display: none;
 }
@@ -159,7 +185,7 @@ label{
     header a.cv{
         display: none;
     }
-    label{
+    header nav label{
         display: block;
         position: absolute;
         top: 20px;
@@ -257,7 +283,7 @@ label{
 }
 .first-section .first.flex-box .left .cv:hover{
     background: #548CA8;
-    box-shadow: 0 0 400px #548CA8 , 0 0 100px #548CA8 , 0 0 200px #548CA8  ;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
 }
 
 
@@ -292,7 +318,7 @@ label{
    color: var(--textcolor);
    margin: 2em 0;
    padding: 5px;
-   line-height: 1.8;
+   line-height: 2;
    letter-spacing: 1px;
    width: 80%;
 }
@@ -300,7 +326,8 @@ label{
 .first-section .first.flex-box .center p.p-2{
     color: var(--textcolor);
     padding: 5px;
-   letter-spacing: 1px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 .first-section .first.flex-box .center p.p-2 i{
     color: var(--bluecolor);
@@ -336,7 +363,6 @@ label{
     .first-section .first.flex-box .left .cv{
         display: block;
     }
-    
     .first-section .first.flex-box .center{
         width: 100%;
         margin-top: 0;
@@ -405,16 +431,7 @@ label{
 
 .wrapper-skills{
     width: 100%;
-    padding: 40px;
-}
-.wrapper-skills h2{
-    text-align: center;
-    font-size: 33px;
-    font-weight: 700;
-    font-family: serif;
-    color: var(--white);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 20px;
 }
 .wrapper-skills .container{
     padding: 40px;
@@ -471,10 +488,10 @@ label{
 }
 @media (max-width: 868px){
     .wrapper-skills .container{
-        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
     .wrapper-skills .container .my-skills{
         width: 100%;
@@ -493,19 +510,11 @@ label{
     margin-top: 30px;
     width: 100%;
 }
-.My-services h2{
-    text-align: center;
-    font-size: 33px;
-    font-weight: 700;
-    font-family: serif;
-    color: var(--white);
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
 .My-services .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 40px;
 }
 .My-services .container .service{
     max-width: 30%;
@@ -521,8 +530,8 @@ label{
 
 .My-services .container .service .icon{
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: 3px solid var(--bluecolor);
     text-align: center;
     margin: 25px auto;
@@ -535,7 +544,7 @@ label{
     color: var(--white);
 }
 .My-services .container .service i{
-    line-height: 60px;
+    line-height: 70px;
     font-size: 26px;
 }
 
@@ -550,6 +559,9 @@ label{
     margin-bottom: 20px;
 }
 @media (max-width : 767px){
+    .My-services .container{
+        padding: 0;
+    }
     .My-services .container .service{
         max-width: 90% ;
     }
@@ -576,16 +588,6 @@ label{
 /************************************ Start my Portfolio **********************************************/
 .my-portfolio{
     margin-top: 40px;
-    padding: 30px;
-}
-.my-portfolio h2{
-    text-align: center;
-    font-size: 33px;
-    font-weight: 700;
-    font-family: serif;
-    color: var(--white);
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 .my-portfolio nav{
     display: flex;
@@ -594,10 +596,12 @@ label{
 }
 .my-portfolio nav ul{
     display: inline-block;
+    margin-bottom: 40px;
 }
 .my-portfolio nav ul li{
     display: inline-block;
     margin: 20px;
+    margin-right: 10px;
     border: 2px solid var(--bluecolor);
     padding : 15px 20px ;
     border-radius: 5px;
@@ -607,34 +611,62 @@ label{
 }
 .my-portfolio nav ul li.active{
     color: #fff;
-    background-color : var(--bluecolor)
+    background-color : var(--bluecolor);
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
+    
 }
 .my-portfolio nav ul li:hover{
     color: #fff;
-    background-color : var(--bluecolor)
+    background-color : var(--bluecolor);
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
 }
 .my-portfolio nav ul li a{
     color: #fff;
+}
+
+.my-portfolio .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.my-portfolio .container .work{
+    width: calc(100% / 4 - 20px);
+    margin: 10px;
+    height: 200px;
+    border: 2px solid var(--bluecolor);
+    background-color: var(--navcolor);
+    border-radius: 15px;
+}
+@media (max-width : 767px){
+    .my-portfolio nav ul li{
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 10px;
+    }
+    .my-portfolio .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .my-portfolio .container .work{
+        width: 44%;
+        margin: 10px;
+    }
+    
 }
 /************************************ end my Portfolio **********************************************/
 
 
 
 /************************************ Start Contact **********************************************/
-.About-me{
+.contact{
     margin-top: 40px;
     padding: 30px;
 }
-.About-me h2{
-    text-align: center;
-    font-size: 33px;
-    font-weight: 700;
-    font-family: serif;
-    color: var(--white);
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.About-me .container{
+.contact .container{
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -642,37 +674,90 @@ label{
     align-items: center;
     flex-direction: row-reverse;
 }
-.About-me .container .form{
+.contact .container .form{
     width: 60%;
+    padding: 40px;
 }
-.About-me .container .form form input{
-    width: 100%;
+.contact .container .form form label{
+   display: block;
+   color: #fff;
+   font-size: 18px;
+   margin: 10px auto;
+}
+.contact .container .form form input{
     padding: 10px;
+    margin: 20px auto;
+    background-color: var(--bgcolor);
     border: none;
-    border-bottom: 2px solid var(--bluecolor); 
+    border-bottom: 2px solid var(--bluecolor);
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+ }
+ .contact .container .form form textarea{
+    display: block;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: var(--bgcolor);
+    border: none;
+    border-bottom: 2px solid var(--bluecolor);
+    width: 100%;
+    resize: none;
+    font-size: 18px;
+    color: #fff;
+ }
+ .contact .container .form form button{
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--white);
+    padding: 15px 30px;
+    background-color: #548CA8;
+    margin-top: 20px;
+    transition: 0.4s linear;
+ }
+.contact .container .form form button:hover{
+    background: #548CA8;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
 }
-
-.About-me .container .image{
+.contact .container .image{
     width: 40%;
 }
-.About-me .container .image img{
+.contact .container .image img{
     width: 100%;
 }
 
 @media (max-width : 867px){
-    .About-me .container{
-        padding: 40px;
+    .contact .container{
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .About-me .container .image{
+    .contact .container .image{
         width: 80%;
+    }
+    .contact .container .form{
+        width: 100%;
     }
 }
 
 
 /************************************ End Contact **********************************************/
+
+
+/************************************ start footer **********************************************/
+footer{
+    padding: 40px;
+    color: #fff;
+    background-color: var(--navcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid var(--bluecolor);
+}
+
+
+/************************************ End footer **********************************************/
 
 
 
