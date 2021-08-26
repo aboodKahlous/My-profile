@@ -6,7 +6,6 @@ $("nav li").on('click' , function(){
 ///////////////////// button to top 
 var scrollButtom = $("#buttom-up");
 $(window).scroll(function() {
-
     if ($(this).scrollTop() >= 300) {
         scrollButtom.fadeIn(1000);
     } else if ($(this).scrollTop() <= 300) {

@@ -734,10 +734,13 @@ label{
         flex-direction: column;
     }
     .contact .container .image{
-        width: 80%;
+        width: 90%;
+        margin-bottom: 20px;
     }
     .contact .container .form{
         width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
     }
 }
 
@@ -755,14 +758,34 @@ footer{
     align-items: center;
     border-top: 4px solid var(--bluecolor);
 }
-
+@media (max-width: 767px){
+    footer{
+        font-size: 14px;
+    }
+}
 
 /************************************ End footer **********************************************/
 
 
 
-
-
+#buttom-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    border: 1px solid var(--bluecolor);
+    display: none;
+    cursor: pointer;
+}
+#buttom-up:hover{
+    background-color: var(--bluecolor);
+}
 /**/
 /* width */
 ::-webkit-scrollbar {
