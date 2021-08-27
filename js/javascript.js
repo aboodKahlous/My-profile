@@ -25,4 +25,7 @@ $(document).ready(function(){
         $(this).toggleClass("fa-align-left fa-times");
     })
 
+    
+
 });
+

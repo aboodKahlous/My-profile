@@ -1,5 +1,5 @@
 :root{
-    --bgcolor : #0e0a27;
+    --bgcolor : #0d0a1f;
     --hcolor : #fff;
     --textcolor : #ddd; 
     --white : #fff;
@@ -73,6 +73,9 @@ header .logo h3{
     font-size: 26px;
     line-height: 70px;
     margin-left: 25px;
+}
+header .logo h3 a{
+    color: #fff;
 }
 header nav ul{
     display: inline-block;
@@ -227,7 +230,7 @@ label{
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    border: 5px solid var(--navcolor);
+    border: 5px solid var(--bluecolor);
 }
 .first-section .first.flex-box .left h3{
     color: var(--hcolor);
@@ -510,11 +513,52 @@ label{
     margin-top: 30px;
     width: 100%;
 }
+.My-services div.text{
+    position: relative;
+    margin: 20px auto;
+    z-index: -1;
+    margin-top: 30px;
+}
+.My-services div.text span {
+    width: 150px;
+    background-color: var(--bluecolor);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    left: 50%;
+}
+  
+.My-services div.text span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--bluecolor) transparent transparent transparent;
+}
 .My-services .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px;
+}
+.My-services span{
+    width: 120px;
+    background-color: var(--bluecolor);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
 }
 .My-services .container .service{
     max-width: 30%;
@@ -526,6 +570,7 @@ label{
     text-align: center;
     font-family: serif;
     cursor: pointer;
+    border: 2px solid var(--bluecolor);
 }
 
 .My-services .container .service .icon{
@@ -564,6 +609,9 @@ label{
     }
     .My-services .container .service{
         max-width: 90% ;
+    }
+    .My-services div.text span {
+        width: 120px;
     }
 }
 @media (min-width : 768px){
@@ -690,10 +738,13 @@ label{
     background-color: var(--bgcolor);
     border: none;
     border-bottom: 2px solid var(--bluecolor);
+    border-right: 2px solid var(--bluecolor);
     width: 100%;
     font-size: 18px;
     color: #fff;
- }
+    border-radius: 5px;
+}
+
  .contact .container .form form textarea{
     display: block;
     padding: 10px;
@@ -705,7 +756,9 @@ label{
     resize: none;
     font-size: 18px;
     color: #fff;
- }
+    border-right: 2px solid var(--bluecolor);
+    border-radius: 5px;
+}
  .contact .container .form form button{
     border-radius: 5px;
     font-size: 16px;
@@ -714,7 +767,7 @@ label{
     background-color: #548CA8;
     margin-top: 20px;
     transition: 0.4s linear;
- }
+}
 .contact .container .form form button:hover{
     background: #548CA8;
     box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
@@ -789,7 +842,7 @@ footer{
 /**/
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 3px;
     height: 30px;
 }
 
@@ -808,5 +861,46 @@ footer{
 
 
 
+.looder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.looder .parent{
+    width: 100%;
+}
+.looder .parent div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bluecolor);
+    display: inline-block;
+    margin: 10px;
+    animation: up-down 0.9s infinite alternate;
+}
+
+.looder .parent div.tow {
+    animation-delay: 0.3s;
+}
+.looder .parent div.three {
+    animation-delay: 0.6s;
+}
+.looder .parent div.four {
+    animation-delay: 0.9s;
+}
+.looder .parent div.five {
+    animation-delay: 0.12s;
+}
+@keyframes up-down{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+        transform: translateY(-20px)  scale(0.9);
+    }
+}
 
 
