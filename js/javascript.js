@@ -20,12 +20,18 @@ scrollButtom.click(function() {
 
 
 $(document).ready(function(){
-
     $("header i").click(function(){
         $(this).toggleClass("fa-align-left fa-times");
     })
-
-    
-
 });
+
+
+
+$(".loading-overlay .spinner").fadeOut(6000,function(){
+    $(this).parent().fadeOut(2000,function(){
+        $("body").css("overflow","auto")
+        $(".loading-overlay").remove()
+    })
+})
+
 
