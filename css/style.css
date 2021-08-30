@@ -67,6 +67,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 
 }
 header .logo h3{
@@ -436,6 +437,7 @@ label{
 .wrapper-skills{
     width: 100%;
     padding: 20px;
+    z-index: -1;
 }
 .wrapper-skills .container{
     padding: 40px;
@@ -533,14 +535,14 @@ label{
 }
   
 .My-services div.text span::after {
-    content: "";
+    content: " ";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -50px;
-    border-width: 6px;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
     border-style: solid;
-    border-color: var(--bluecolor) transspinner transspinner transspinner;
+    border-color: var(--bluecolor) transparent transparent transparent;
 }
 .My-services .container{
     display: flex;
@@ -739,7 +741,6 @@ label{
     background-color: var(--bgcolor);
     border: none;
     border-bottom: 2px solid var(--bluecolor);
-    border-right: 2px solid var(--bluecolor);
     width: 100%;
     font-size: 18px;
     color: #fff;
@@ -757,7 +758,6 @@ label{
     resize: none;
     font-size: 18px;
     color: #fff;
-    border-right: 2px solid var(--bluecolor);
     border-radius: 5px;
 }
  .contact .container .form form button{
