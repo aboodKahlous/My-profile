@@ -729,7 +729,7 @@ label{
     width: 60%;
     padding: 40px;
 }
-.contact .container .form form label{
+.contact label{
    display: block;
    color: #fff;
    font-size: 18px;
@@ -738,7 +738,7 @@ label{
 .contact .container .form form input{
     padding: 10px;
     margin: 20px auto;
-    background-color: var(--bgcolor);
+    background-color: var(--navcolor);
     border: none;
     border-bottom: 2px solid var(--bluecolor);
     width: 100%;
@@ -747,19 +747,6 @@ label{
     border-radius: 5px;
 }
 
- .contact .container .form form textarea{
-    display: block;
-    padding: 10px;
-    margin: 20px auto;
-    background-color: var(--bgcolor);
-    border: none;
-    border-bottom: 2px solid var(--bluecolor);
-    width: 100%;
-    resize: none;
-    font-size: 18px;
-    color: #fff;
-    border-radius: 5px;
-}
  .contact .container .form form button{
     border-radius: 5px;
     font-size: 16px;
@@ -768,16 +755,31 @@ label{
     background-color: #548CA8;
     margin-top: 20px;
     transition: 0.4s linear;
+    width: 100%;
+    text-align: center;
 }
 .contact .container .form form button:hover{
     background: #548CA8;
     box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
 }
-.contact .container .image{
+.contact .container .textarea{
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.contact .container .image img{
+.contact .container .textarea textarea{
     width: 100%;
+    display: block;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: var(--navcolor);
+    border: none;
+    border-bottom: 2px solid var(--bluecolor);
+    resize: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
 }
 
 @media (max-width : 867px){
